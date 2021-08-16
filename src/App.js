@@ -1,9 +1,13 @@
 import React from 'react';
 import './App.css';
+import PlanetsProvider from './Components/PlanetsProvider';
+import { AuthProvider } from './Providers/Auth';
 
 function App() {
   return (
-    <span>Hello, App!</span>
+    <AuthProvider>
+      <PlanetsProvider />
+    </AuthProvider>
   );
 }
 
